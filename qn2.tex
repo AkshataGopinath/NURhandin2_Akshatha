@@ -1,0 +1,36 @@
+\section{Question 2}
+
+In this section, the script and outputs for question 2- generating a gaussian random field are included.
+
+Code for question 2:
+\lstinputlisting{q2.py}
+
+The outputs are:
+\lstinputlisting{q2.txt}
+
+Since my gaussian random generator fucntion box\_muller was slowing down the code as it needs to be called 1024*1024 times in the loop (using it the code for question 2 took 290 seconds, without it, it is taking 20s), I have used numpy.random.normal inside the loop. 
+
+Figures for 2 are:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{GaussianRandomField1.png}
+  \caption{n = -1}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{GaussianRandomField2.png}
+  \caption{n = -2}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{GaussianRandomField3.png}
+  \caption{n = -3}
+  \label{fig:fig1}
+\end{figure}
+
+
+A seen in the images, the imaginary parts of all the fields is nearly zero. This means the symmetry conditions have been satisfied well. The structures in the field are seen to grow in size as the power n goes from -1 to -3, as expected.

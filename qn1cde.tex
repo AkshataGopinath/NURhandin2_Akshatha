@@ -1,0 +1,64 @@
+\section{Question 1 c,d,e}
+
+Code for 1c, 1d and 1e:
+\lstinputlisting{q1cde.py}
+
+\subsection{1c}
+
+Figures for KS test 1(c) are:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{ks_d.png}
+  \caption{1(c)}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{ks_pval.png}
+  \caption{1(c)}
+  \label{fig:fig1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%
+\subsection{1d}
+
+Kuiper's test figures for 1(d):
+KS test d-statistic: it is seen that as number of random numbers sampled increases, the sampled numbers are more and more gaussian in distribution.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{kuip_d.png}
+  \caption{1(c)}
+  \label{fig:fig1}
+\end{figure}
+
+Kuiper test d-statistic: the distance statistic calculated by me seems to be slightly higher than that calculated by astropy's kuiper's test, hence the p-values are slightly lower than expected,
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{kuiper_pval.png}
+  \caption{1(c)}
+  \label{fig:fig1}
+\end{figure}
+%%%%%%%%%%%%%%%%
+\subsection{1e}
+
+The results of 1(e), to check which of the random number sequences match a gaussian distribution are:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{ks_data.png}
+  \caption{1(c)}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{ksd_data.png}
+  \caption{1(c)}
+  \label{fig:fig1}
+\end{figure}
+
+KS test between the generated gaussian random numbers and the 10 datasets provided show that the p-value is high for dataset-3. So random number array 3 is most likely to be consistent with gussian random numbers with sigma=1 and mu=0.
+Looking at the d-values, one can infer that dataset numbers 1, 4, 8 are very dissimilar to a gaussain distribution of mu=0 and sigma=1.

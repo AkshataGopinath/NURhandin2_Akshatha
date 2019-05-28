@@ -1,0 +1,50 @@
+\section{Question 5}
+
+In this section, the script and outputs for question 5 (d) and 5(e), are included.
+The code includes using Cooley Tukey algorithm to perform a 1D FFT. This in turn in used to loop over different axes to obtain the 2D FFT algorithm and 3D FFT algorithm. 
+
+While plotting in the 2D and 3D FFT cases, I have used numpy.fft.fftshift in order to shift the zero frequency component to the centre. (was not sure whether or not this should be done). I have not used this for the 1D case.
+
+Code for 5d:
+\lstinputlisting{q5d.py}
+
+The outputs are:
+\lstinputlisting{q5d.txt}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./5d_fft1d.png}
+  \caption{2}
+  \label{fig:fig1}
+\end{figure}
+
+
+Code for 5e:
+\lstinputlisting{q5e.py}
+
+The outputs are:
+\lstinputlisting{q5e.txt}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./5e_fft2d.png}
+  \caption{2}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./5e_fft3d.png}
+  \caption{2}
+  \label{fig:fig1}
+\end{figure}
+
+From 5 c,d,e we see that:
+\begin{itemize}
+    \item 1D FFT verification: it is found that the fourier transform found by the written fft function matches with the result of the numpy fft function and the analytical FT of the rectanguler function (which is a sinc function- which can be seen in its traditional from if the FFT result had been FFT shifted).
+    
+    \item 2D FFT verification: it is found that the fourier transform found by the written fft function matches with the result of the numpy fft function. Analytically it should be a 2d sinc function, and it is seen that it resembles a 2D sinc function in the plots.
+    
+    \item 3D FFT verification: it is found that the fourier transform found by the written fft function matches with the result of the numpy fft function. Analytically it should be a 3d gaussian function, and it is seen that it resembles a 3D gaussian function in the plots. A broader input gaussian fucntion will produce a narrower one in the fourier domain and vice versa. Had the gaussian been assymmetric instead of symmetric, the axis with a wider sigma in the spatial domain will be the axis with the narrower sigma in the fourier domain and vice versa.
+    
+\end{itemize}

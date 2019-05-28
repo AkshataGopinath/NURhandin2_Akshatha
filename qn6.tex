@@ -1,0 +1,23 @@
+\section{Question 6}
+
+In this section, the script and outputs for question 6 are included.
+It aims to produce a model to classify GRBs into long and short categories, using logistic regression to assign weights to the parameters. There were around 15 XRFs in the data provided, and they have been removed while performing the logistic regression, since we do not want data that's not relevant. 
+I plotted the values of all the parameters with their known classification into long/short using parameter T90, in oredr to see which of them showed good clustering. These will be the ones that will be most helpful while classifying. However not many showed very clear clustering. I tried various combinations of the hyperparameters, and saw that all of them produced similar results with very close f1-scores.
+
+Missing data has been handled by replacing it with zeros (had the dataset been large enough, replacing missing data by interpolation might have been an option). Columns SSFR and AV had a lot of non-determined values, and hence are excluded from the model.
+
+Code for 6:
+\lstinputlisting{q6.py}
+
+The outputs are:
+\lstinputlisting{q6.txt}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{grb_hist.png}
+  \caption{Figure showing classification into long and short GRBs- with actual classification and predicted classification}
+  \label{fig:fig1}
+\end{figure}
+
+The classifier written by me has an accuracy of 0.78. However, it can be seen that all the GRBs are classified as long. Since the data contains 172 long GRBs out of 220, we end up with being right 172/220 = 0.78 of the times. However there are very few samples of short GRBs, which is probably why the classifier might not be characterizing them very well through the parameters.  

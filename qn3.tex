@@ -1,0 +1,24 @@
+\section{Question 3}
+
+In this section, the script and outputs for question 3 are included.
+
+Code for Q3:
+\lstinputlisting{q3.py}
+
+The outputs are:
+\lstinputlisting{q3.txt}
+
+The growth factor using Runge Kutta 4th oredr numerical solution of the 2nd order ODE is found for a period of 1000 years, with a step size of 1/100th of an year.
+The manipulations done to the 2nd order ODE to be able to use RK4 are explained in the comments of the code itself. 
+The analytical general solution of the second order differential equation can be written as:$$ D(t) = c1t^{2/3} + c2/t$$. Plugging in the appropriate coefficients(in the code), the solutions are over-plotted on the numerical solution obtained. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{RK.png}
+  \caption{2}
+  \label{fig:fig1}
+\end{figure}
+
+For the given initial conditions in an Einstein de-Sitter universe, we see that Case 1 and Case 3 show growth, while case 2 shows decay. This is to be expected since the initial condition for D'(t) for case 2 is negative. D'(t) determines how the expansion/collapse progresses with time.
+
+The numerical solutions are also seen to match very well with the analytical solutions.

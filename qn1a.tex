@@ -1,0 +1,43 @@
+
+
+\section{Question 1}
+
+In this section, the script and outputs for questions 1 are included. 
+ 
+
+\subsection{Q 1a}
+The code for the RNG using XOR shift and MWC: Code for 1a:
+\lstinputlisting{q1a.py}
+
+The outputs are:
+\lstinputlisting{q1a.txt}
+
+Figures for 1(a) are:
+
+The RNG function random() seems to work well as evidenced by the figures below. The scatter plot has no visible correlation. The histogram has a mean of 50000, and bins that vary within 1 sigma of the mean. Since these are discrete samples, they will be poisson distributed and the $ sigma = \sqrt{mean}$, which is $\sqrt(50000) = 223.6$
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{RNGscatter.png}
+  \caption{1(a)}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{RNs.png}
+  \caption{1(a)}
+  \label{fig:fig2}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{RNGhist.png}
+  \caption{1(a)}
+  \label{fig:fig2}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%

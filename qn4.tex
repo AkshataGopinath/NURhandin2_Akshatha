@@ -1,0 +1,15 @@
+\section{Question 4}
+
+In this section, the script and outputs for question 4 are included.
+
+For 4a, the integral is solved by making a change of variables from z to a, to avoid the integral limit of infinity for z. Once the change of variables is done, the lower limit for $a$ corresponding to $z=50$, will be 1/51; and the upper limit corresponding to infinity will be 0. My integration function integrates between 0 and 1/51 for $a$, i.e. the limits are interchanged. Hence the value of the required integral will be negative of the value found by integrating with the mentioned interchange in limits.
+
+I use Romberg integration with mid-point rule. Mid point rule is used instead of trapezoid rule since at limit=0, the function is not well behaved.
+
+Code for 4 a and b:
+\lstinputlisting{q4ab.py}
+
+The outputs are:
+\lstinputlisting{q4ab.txt}
+
+The value of the integral by numerical integration is seen to match the analytical value within $10^{-5}$ relatively. The total value of the growth factor matches within $10^{-3}$.

@@ -10,7 +10,7 @@ from pprint import pprint
 df = pd.read_csv(
     'grbs.txt',
     delim_whitespace=True, skiprows=2, na_values=-1,
-    names=['Type', 'Catalog', 'Redshift', 'T90', 'log (M*/M☉)', 'SFR', 'log (Z/Z☉)', 'SSFR', 'AV'])
+    names=['Type', 'Catalog', 'Redshift', 'T90', 'log (M*/Mo)', 'SFR', 'log (Z/Zo)', 'SSFR', 'AV'])
 
 # Cleanup dataset
 
